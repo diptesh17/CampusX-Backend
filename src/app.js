@@ -7,6 +7,7 @@ const hrRoutes = require("./routes/hrRoutes");
 const jobRoutes = require("./routes/jobRoutes");
 const applicationRoutes = require("./routes/applicationRoutes");
 const hrApplicationRoutes = require("./routes/hrApplicationRoutes");
+const analyticsRoutes = require("./routes/analyticsRoutes");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use("/api/hr", hrRoutes);
 app.use("/api/jobs", jobRoutes);
 app.use("/api/applications", applicationRoutes);
 app.use("/api/hr", hrApplicationRoutes);
+app.use("/api/hr", analyticsRoutes);
 
 
 app.get("/api/health", (req, res) => {
