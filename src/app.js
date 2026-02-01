@@ -5,8 +5,7 @@ const authRoutes = require("./routes/authRoutes");
 const candidateRoutes = require("./routes/candidateRoutes");
 const hrRoutes = require("./routes/hrRoutes");
 const jobRoutes = require("./routes/jobRoutes");
-
-
+const applicationRoutes = require("./routes/applicationRoutes");
 
 const app = express();
 
@@ -17,10 +16,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/candidate", candidateRoutes);
 app.use("/api/hr", hrRoutes);
 app.use("/api/jobs", jobRoutes);
-
-
-
-
+app.use("/api/applications", applicationRoutes);
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({ message: "Server is running" });
